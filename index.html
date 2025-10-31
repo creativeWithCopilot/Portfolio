@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Win Thein's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <header role="banner">
+    <nav role="navigation" aria-label="Main Navigation">
+      <h1>Win Thein's Portfolio</h1>
+      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-menu">
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about-me">
+    <h2>About Me</h2>
+    <p>
+      Junior .NET Full Stack Developer with experience in CRM feature development using .NET Core and EF Core. Improved feature adoption by 20%, reduced crash incidents by 30%, and enhanced deployment efficiency by 25%. Passionate about clean code, CI/CD, and collaborative development.
+    </p>
+    <ul>
+      <li>Peer code reviews and knowledge sharing</li>
+      <li>CI/CD pipeline setup</li>
+      <li>Unit testing with 40% coverage improvement</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-filters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('backend')">Backend</button>
+      <button onclick="filterProjects('frontend')">Frontend</button>
+    </div>
+    <div class="project-list">
+      <article class="project-card backend">
+        <figure>
+          <img src="project1.png" alt="CRM dashboard screenshot" onclick="openLightbox(this)" />
+          <figcaption>CRM Feature Enhancement</figcaption>
+        </figure>
+        <p>Improved CRM features using .NET Core and EF Core.</p>
+      </article>
+      <article class="project-card frontend">
+        <figure>
+          <img src="project2.png" alt="Responsive UI layout" onclick="openLightbox(this)" />
+          <figcaption>Responsive UI Design</figcaption>
+        </figure>
+        <p>Built responsive layouts with HTML, CSS, and JavaScript.</p>
+      </article>
+    </div>
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" alt="Expanded project image" />
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <h3>Backend</h3>
+      <ul>
+        <li>Logical Thinking and Problem-Solving</li>
+        <li>C#, EF Core, SQL</li>
+        <li>Dependency Injection, Middleware</li>
+        <li>API Security: JWT, ASP.NET Identity</li>
+        <li>DevOps, CI/CD</li>
+      </ul>
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Blazor</li>
+        <li>UI/UX Design</li>
+        <li>Web Application Security</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="10" style="height: 10rem;" required></textarea>
+
+      <button type="submit">Send</button>
+      <p id="form-feedback" role="alert"></p>
+    </form>
+  </section>
+
+  <a href="#top" id="back-to-top" aria-label="Back to top">⬆️ Top</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
